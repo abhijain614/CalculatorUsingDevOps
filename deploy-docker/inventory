@@ -1,2 +1,2 @@
-[ubuntu]
-172.16.129.220 ansible_user=vtandonv
+[abhinandan]
+172.17.0.3 ansible_user=abhijain614
