@@ -1,2 +1,2 @@
-[deploydemo]
-172.17.0.4 ansible_user=abhi
+[abhinandan]
+172.17.0.3 ansible_user=abhi
