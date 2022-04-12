@@ -10,4 +10,4 @@
     - name: remove docker images
       shell: docker image rm -f abhijain614/demorepo:latest
     - name: create docker image
-      shell: docker run -d --name mini-project abhijain614/demorepo:latest
+      shell: docker run -it --name mini-project abhijain614/demorepo:latest
