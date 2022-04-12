@@ -1,7 +1,7 @@
 ---
 - hosts: all
   become: true
-  ask_become_pass: true
+  --ask-pass: true
   
   tasks:
     - name: stop previous version docker
