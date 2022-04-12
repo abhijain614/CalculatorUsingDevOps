@@ -1,9 +1,14 @@
 ---
-- name: Deploy a jar file
-  hosts: abhinandan
-  remote_user: abhi
+- hosts: all
+  become: true
+
   tasks:
-    - name: Copy jar file to home directory
-      copy:
-        src: ./target/calculatorDevOps-1.0-SNAPSHOT-jar-with-dependencies.jar
-        dest: ~/
+    - name: stop previous version docker
+      shell: docker stop mini-project
+    - name: remove stopped container
+      shell: docker rm -f mini-project
+    - name: remove docker images
+      shell: docker image rm -f goliakshay357/mini-project:latest
+
+    - name: create docker image
+      shell: docker run -d -p 80:80 --name mini-project goliakshay357/mini-project:latest
