@@ -1,13 +1,18 @@
 ---
-- hosts: all
-  become: true
-  
+- name: Pull and run docker image of abhijain614/demorepo
+  hosts: all
+
   tasks:
-    - name: stop previous version docker
-      shell: docker stop mini-project
-    - name: remove stopped container
-      shell: docker rm -f mini-project
-    - name: remove docker images
-      shell: docker image rm -f abhijain614/demorepo:latest
-    - name: create docker image
-      shell: docker run -it --name mini-project abhijain614/demorepo:latest
+    - name: Pull abhijain614/demorepo image
+      docker_image:
+        name: abhijain614/demorepo
+        source: pull
+#   tasks:
+#     - name: stop previous version docker
+#       shell: docker stop mini-project
+#     - name: remove stopped container
+#       shell: docker rm -f mini-project
+#     - name: remove docker images
+#       shell: docker image rm -f abhijain614/demorepo:latest
+#     - name: create docker image
+#       shell: docker run -it --name mini-project abhijain614/demorepo:latest
