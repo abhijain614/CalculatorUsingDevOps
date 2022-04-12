@@ -1,7 +1,8 @@
 ---
 - hosts: all
   become: true
-
+  ask_become_pass: true
+  
   tasks:
     - name: stop previous version docker
       shell: docker stop mini-project
