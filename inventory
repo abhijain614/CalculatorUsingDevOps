@@ -1,2 +1,2 @@
 [ubuntu-20-04]
-127.0.0.1 ansible_ssh_pass=Abhi@1407 ansible_ssh_user=abhi
+172.16.129.244 ansible_ssh_pass=Abhi@1407 ansible_ssh_user=abhi
